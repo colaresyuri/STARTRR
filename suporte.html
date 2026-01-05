@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Suporte — STARTRR</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <svg
+            width="140"
+            height="40"
+            viewBox="0 0 280 80"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="STARTRR logo"
+          >
+            <rect rx="8" width="280" height="80" fill="#0b5a3a"></rect>
+            <text
+              x="20"
+              y="52"
+              fill="#fff"
+              font-family="Arial, sans-serif"
+              font-size="38"
+            >
+              STARTRR
+            </text>
+          </svg>
+        </div>
+
+        <nav class="main-nav" aria-label="Principal">
+          <a href="index.html">Simulador</a>
+          <a href="aulas.html">Aulas</a>
+          <a href="#">Mentor On-line</a>
+          <a href="vitrine.html">Vitrine do Empreendedor</a>
+          <a href="suporte.html" class="active">Suporte</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="content-block">
+        <h1>Suporte</h1>
+        <p>Tem alguma dúvida, sugestão ou encontrou um bug? Fale conosco!</p>
+
+        <h2>Como usar a plataforma STARTRR</h2>
+        <ul>
+          <li>
+            <strong>Simulador:</strong> Preencha os campos com os dados do seu
+            negócio e clique em <b>Simular</b> para ver resultados,
+            interpretações e recomendações personalizadas.
+          </li>
+          <li>
+            <strong>Aulas:</strong> Acesse a aba <b>Aulas</b> para visualizar os
+            módulos disponíveis. Clique em <b>Fazer matrícula</b> para se
+            inscrever e acompanhar seu progresso.
+          </li>
+          <li>
+            <strong>Vitrine do Empreendedor:</strong> Cadastre seu negócio
+            preenchendo o formulário na aba <b>Vitrine do Empreendedor</b>. Seu
+            negócio aparecerá para toda a rede STARTRR!
+          </li>
+        </ul>
+
+        <h2>FAQ</h2>
+        <details>
+          <summary>Como uso o simulador?</summary>
+          <p>
+            Preencha as informações do seu negócio (preço, quantidade, custos,
+            investimento) e clique em <b>Simular</b>. O sistema mostrará
+            resultados, gráficos e recomendações práticas.
+          </p>
+        </details>
+        <details>
+          <summary>Como acesso e me matriculo nas aulas?</summary>
+          <p>
+            Vá até a aba <b>Aulas</b>, escolha o módulo desejado e clique em
+            <b>Fazer matrícula</b>. Você pode acompanhar seus cursos em "Meus
+            cursos".
+          </p>
+        </details>
+        <details>
+          <summary>Como cadastro meu negócio na Vitrine?</summary>
+          <p>
+            Na aba <b>Vitrine do Empreendedor</b>, preencha o formulário com os
+            dados do seu negócio e clique em <b>Cadastrar</b>. Seu negócio será
+            exibido para outros empreendedores e potenciais clientes.
+          </p>
+        </details>
+        <details>
+          <summary>Posso editar ou remover meu cadastro na Vitrine?</summary>
+          <p>
+            Atualmente, para editar ou remover um cadastro, entre em contato
+            pelo formulário abaixo ou pelo e-mail de suporte.
+          </p>
+        </details>
+        <details>
+          <summary>Meus dados estão seguros?</summary>
+          <p>
+            Sim! Os dados são usados apenas para exibição na plataforma e não
+            são compartilhados com terceiros.
+          </p>
+        </details>
+
+        <h2>Envie sua dúvida</h2>
+        <form class="vendor-form" style="max-width: 420px" autocomplete="off">
+          <div class="form-row">
+            <label
+              >Nome
+              <input type="text" name="nome" required placeholder="Seu nome" />
+            </label>
+          </div>
+          <div class="form-row">
+            <label
+              >Email
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="seu@email.com"
+              />
+            </label>
+          </div>
+          <div class="form-row">
+            <label
+              >Sua dúvida ou sugestão
+              <textarea
+                name="mensagem"
+                rows="3"
+                required
+                placeholder="Descreva sua dúvida ou sugestão"
+              ></textarea>
+            </label>
+          </div>
+          <div class="form-row form-actions">
+            <button type="submit" class="contact-btn">Enviar</button>
+            <span class="small" aria-live="polite"
+              >(Formulário ilustrativo, não envia e-mail real)</span
+            >
+          </div>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© STARTRR — Protótipo. Feito para demonstração acadêmica.</small>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

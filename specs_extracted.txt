@@ -1,0 +1,83 @@
+PRODUTO: criação de um site que oferta aulas e  simula o cenário financeiro do 
+empreendimento. 
+OBJETIVO: tem como finalidade capacitar e apresentar, de forma simples e 
+objetiva, os principais indicadores que um microempreendedor individual deve 
+considerar ao iniciar ou reestruturar seu negócio, tais como custos operacionais, 
+margem de lucro e ponto de equilíbrio. 
+MENU:  
+1) AULAS 
+3.1 Planejamento do negócio 
+3.2 Direitos e vantagens do MEI 
+3.3 Como se formalizar  
+3.4 Gestão Financeira Básica 
+3.4 Vendas e Relacionamento com Clientes 
+3.5 Marketing Digital  
+ 
+2) SIMULADOR FINANCEIRO 
+com campos de entrada para dados financeiros básicos.  Calcula 
+indicadores como ponto de equilíbrio, rentabilidade, margem de lucro e 
+viabilidade. Gerando dashboards de desempenho do negócio.  
+ 
+3) COMUNIDADE DE EMPREENDEDORES 
+ 
+4) SUPORTE TÉCNICO/ 
+ 
+ 
+ELEMENTOS QUE VÃO DIFERENCIAR A PROPOSTA DE OUTROS EXISTENTES NO 
+MERCADO 
+1.  Diagnóstico de Perfil 
+Nenhum simulador disponível (SEBRAE, INPI, apps) personaliza o uso conforme o 
+perfil de maturidade do usuário.   Isso permite recomendações específicas e 
+direcionamento. 
+2. Recomendações de Ações com Base no Resultado 
+Depois de rodar a simulação, o sistema sugere ações práticas . O simulador deixa de 
+ser só uma calculadora e se torna um orientador prático com base nos dados inseridos. 
+Considere renegociar custos fixos; 
+3. .Comparação de Cenários 
+
+Permite ao usuário simular duas versões do seu negócio e comparar: 
+      Cenário A: custo atual, preço atual 
+      Cenário B: novo preço, novo custo 
+Resultado: o simulador mostra qual cenário é mais vantajoso. 
+4. Modo Leitura com Áudio Automático (voz sintetizada) 
+O simulador pode ter um botão que lê as instruções e os resultados em voz alta.  Útil para 
+pessoas com baixa escolaridade, analfabetismo funcional ou deficiência visual leve. 
+JUSTIFICATIVA: 
+O simulador proposto apresenta como inovação a integração de elementos funcionais 
+não identificados em registros do INPI ou ferramentas públicas existentes, como o 
+módulo de diagnóstico de perfil do usuário, a geração de interpretações automatizadas 
+em lin guagem acessível, a recomendação de ações baseadas nos resultados e a 
+funcionalidade de leitura automática por áudio (modo leitura em voz), voltada à 
+acessibilidade de usuários com baixa escolaridade ou deficiência visual leve. 
+Esses recursos transformam a ferramenta de uma simples calculadora em um 
+instrumento de orientação personalizada, acessível e de inclusão produtiva, com foco 
+na realidade do MEI iniciante. 
+RASCUNHOS 
+ 
+
+
+ 
+ 
+ 
+ 
+
+
+O que eu quero X o que é possível 
+ 
+O QUE EU QUERO: 
+O site da solução  se chamará “STARTRR” não precisa estar 100% funcional , já que o 
+objetivo é apresentar de forma visual e exemplificativa  o conceito do simulador. A 
+proposta inclui a criação de uma interface navegável com domínio gratuito , 
+preferencialmente com nome personalizado no endereço. 
+O foco principal da demonstração é viabilizar a experiência visual da ferramenta , 
+permitindo que o usuário insira dados básicos e visualize um dashboard-resumo 
+automático com interpretações em texto, simulando algo. 
+Além disso, sugere -se a inclusão de um recurso de leitura em áudio de feedbacks pré -
+configurados, com o objetivo de reforçar a acessibilidade  durante a apresentação e 
+demonstrar o potencial do simulador como ferramenta inclusiva. 
+Mesmo que os cálculos ou integrações não estejam plenamente , a apresentação do 
+protótipo já permitirá comunicar a ideia, a usabilidade do produto.  
+ 
+O QUE É POSSÍVEL: 
+O que for rápido de fazer e mais “fácil”, afinal, é só um trabalho acadêmico. 
+ 

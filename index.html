@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>STARTRR — Simulador Financeiro</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <!-- Placeholder SVG logo; replace with your logo file if available -->
+          <svg
+            width="140"
+            height="40"
+            viewBox="0 0 280 80"
+            xmlns="http://www.w3.org/2000/svg"
+            role="img"
+            aria-label="STARTRR logo"
+          >
+            <rect rx="8" width="280" height="80" fill="#0b5a3a"></rect>
+            <text
+              x="20"
+              y="52"
+              fill="#fff"
+              font-family="Arial, sans-serif"
+              font-size="38"
+            >
+              STARTRR
+            </text>
+          </svg>
+        </div>
+
+        <nav class="main-nav" aria-label="Principal">
+          <a href="#simulador" class="active">Simulador</a>
+          <a href="aulas.html">Aulas</a>
+          <a href="#">Mentor On-line</a>
+          <a href="vitrine.html">Vitrine do Empreendedor</a>
+          <a href="suporte.html">Suporte</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="hero" class="hero">
+        <h1>Simulador Financeiro para MEI</h1>
+        <p>
+          Insira os dados do seu negócio e veja indicadores práticos: ponto de
+          equilíbrio, margem, rentabilidade e comparação de cenários.
+        </p>
+      </section>
+
+      <section id="simulador" class="simulator">
+        <div class="panel form-panel">
+          <h2>Entradas - Cenário A</h2>
+          <label
+            >Nome do negócio
+            <input
+              type="text"
+              id="businessName"
+              placeholder="Ex.: Quitanda da Maria"
+            />
+          </label>
+
+          <div class="row">
+            <label
+              >Preço por unidade (R$)
+              <input type="number" id="priceA" min="0" step="0.01" value="10" />
+            </label>
+            <label
+              >Unidades vendidas / período
+              <input type="number" id="qtyA" min="0" step="1" value="100" />
+            </label>
+          </div>
+
+          <div class="row">
+            <label
+              >Custo variável por unidade (R$)
+              <input
+                type="number"
+                id="varCostA"
+                min="0"
+                step="0.01"
+                value="4"
+              />
+            </label>
+            <label
+              >Custos fixos / período (R$)
+              <input
+                type="number"
+                id="fixedCostA"
+                min="0"
+                step="0.01"
+                value="200"
+              />
+            </label>
+          </div>
+
+          <label
+            >Investimento inicial (R$)
+            <input
+              type="number"
+              id="investmentA"
+              min="0"
+              step="0.01"
+              value="1000"
+            />
+          </label>
+
+          <div class="actions">
+            <button id="simulateBtn">Simular</button>
+            <button id="clearBtn" class="alt">Limpar</button>
+            <label class="inline"
+              ><input type="checkbox" id="autoRead" /> Modo leitura
+              (áudio)</label
+            >
+          </div>
+
+          <hr />
+
+          <div id="scenarioBtoggle" class="scenario-toggle">
+            <button id="toggleB">Adicionar/Editar Cenário B (Comparar)</button>
+          </div>
+
+          <div id="scenarioB" class="hidden">
+            <h3>Cenário B (comparação)</h3>
+            <div class="row">
+              <label
+                >Preço por unidade (R$)
+                <input
+                  type="number"
+                  id="priceB"
+                  min="0"
+                  step="0.01"
+                  value="12"
+                />
+              </label>
+              <label
+                >Unidades vendidas / período
+                <input type="number" id="qtyB" min="0" step="1" value="100" />
+              </label>
+            </div>
+
+            <div class="row">
+              <label
+                >Custo variável por unidade (R$)
+                <input
+                  type="number"
+                  id="varCostB"
+                  min="0"
+                  step="0.01"
+                  value="5"
+                />
+              </label>
+              <label
+                >Custos fixos / período (R$)
+                <input
+                  type="number"
+                  id="fixedCostB"
+                  min="0"
+                  step="0.01"
+                  value="200"
+                />
+              </label>
+            </div>
+
+            <label
+              >Investimento inicial (R$)
+              <input
+                type="number"
+                id="investmentB"
+                min="0"
+                step="0.01"
+                value="1000"
+              />
+            </label>
+          </div>
+        </div>
+
+        <div class="panel results-panel" aria-live="polite">
+          <h2>Dashboard / Resultados</h2>
+
+          <div id="cards" class="result-cards">
+            <!-- Cards populated by JS -->
+          </div>
+
+          <div class="chart-panel">
+            <div id="resultsNumbers" class="results-numbers" style="display: flex; gap: 32px; margin-bottom: 10px; font-size: 1.1em;"></div>
+            <canvas
+              id="resultsChart"
+              aria-label="Gráfico de resultados"
+              role="img"
+            ></canvas>
+            <div class="chart-legend">
+              <span class="legend-item"
+                ><span class="dot revenue"></span> Receita</span
+              >
+              <span class="legend-item"
+                ><span class="dot cost"></span> Custos totais</span
+              >
+              <span class="legend-item"
+                ><span class="dot profit"></span> Lucro</span
+              >
+            </div>
+          </div>
+
+          <section id="interpretation" class="interpretation">
+            <h3>Interpretação</h3>
+            <div id="interpretationText">
+              Execute a simulação para ver interpretações e recomendações.
+            </div>
+          </section>
+
+          <section id="recommendations" class="recommendations">
+            <h3>Recomendações</h3>
+            <ul id="recommendationsList">
+              <li>Execute a simulação para ver recomendações personalizadas para o seu negócio.</li>
+            </ul>
+          </section>
+
+          <section id="comparison" class="comparison hidden">
+            <h3>Comparação de Cenários</h3>
+            <div id="comparisonTable"></div>
+          </section>
+
+          <div class="result-audio">
+            <button id="readBtn">Ler resultados</button>
+            <button id="stopReadBtn" class="alt">Parar leitura</button>
+            <button id="openReportBtn" class="alt">Abrir relatório detalhado</button>
+            <button id="downloadPdfBtn">Baixar relatório (PDF)</button>
+          </div>
+
+          <!-- Modal do relatório detalhado -->
+          <div id="reportModal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="reportTitle">
+            <div class="modal-content">
+              <button class="modal-close" id="closeReportBtn" aria-label="Fechar relatório">&times;</button>
+              <h3 id="reportTitle">Relatório detalhado</h3>
+              <div id="reportContent" class="report-pre">Nenhum relatório gerado ainda.</div>
+              <div style="margin-top:12px">
+                <button id="modalDownloadPdf">Baixar (PDF)</button>
+                <button id="modalDownloadTxt" class="alt">Baixar (TXT)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <footer class="site-footer">
+      <div class="container">
+        <small>© STARTRR — Protótipo. Feito para demonstração acadêmica.</small>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
