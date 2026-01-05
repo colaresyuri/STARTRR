@@ -1,3 +1,22 @@
+// Menu mobile hamburguer
+document.addEventListener("DOMContentLoaded", function () {
+  var navToggle = document.querySelector(".nav-toggle");
+  var mainNav = document.getElementById("mainNav");
+  if (navToggle && mainNav) {
+    navToggle.addEventListener("click", function () {
+      var expanded = navToggle.getAttribute("aria-expanded") === "true";
+      navToggle.setAttribute("aria-expanded", !expanded);
+      mainNav.classList.toggle("open");
+    });
+    // Fecha o menu ao clicar em um link
+    mainNav.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        mainNav.classList.remove("open");
+        navToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+});
 // STARTRR - Script universal para todas as páginas
 
 function $(id) {
